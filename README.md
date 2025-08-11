@@ -1,6 +1,6 @@
 # MCU-bench
 
-**A multi-core Microcontroller benchmark suite — C/C++ and MicroPython**
+**A multi-core ARM & RISC-V Microcontroller benchmark suite — C/C++ and MicroPython**
 
 ---
 
