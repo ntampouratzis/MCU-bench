@@ -60,7 +60,7 @@ Notes
 #define SPMV 2
 
 
-#define FREQ 200000 // change the frequency to 200 MHz (value is in kHz)
+#define FREQ 280000 // change the frequency to 280 MHz (value is in kHz)
 
 #ifndef ALGO
 // change ALGO to AXPY, MATMUL, or SPMV
