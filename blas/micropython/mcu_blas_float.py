@@ -325,8 +325,7 @@ def run_spmv(N=SPMV_N, nnz_per_row=SPMV_NNZ_PER_ROW, mode=MODE, threads=NUM_THRE
 # ---------------- main runner ----------------
 
 def run_selected():
-    print("RP Pico 2 MicroPython FLOPS benchmark (revised)
-")
+    print("RP Pico 2 MicroPython FLOPS benchmark (revised)")
     print("_thread available:", _THREAD_AVAILABLE)
     if MODE == "MULTI" and not _THREAD_AVAILABLE:
         print("WARNING: MULTI mode requested but _thread is not available on this build. Falling back to SINGLE.")
@@ -343,3 +342,4 @@ def run_selected():
 
 if __name__ == '__main__':
     run_selected()
+
