@@ -49,6 +49,7 @@ The project contains both **single-core** and **multi-core** variants (where the
 ├─ micropython/          
 |  ├─ mcu_blas_float.py/      # MicroPython benchamrk suite for axpy, matmul, spmv using floating point operations (exploiting the FPU and DSPs)
 |  ├─ mcu_blas_float.py/      # MicroPython benchamrk suite for axpy, matmul, spmv using integer operations
+```
 
 ## How the benchmarks work (methodology)
 1. **Warm-up**: each test performs a configurable warm-up run to ensure caches, PLLs and dynamic frequency scaling settle and to reduce the impact of one-off initialization costs.
