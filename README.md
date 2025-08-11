@@ -29,3 +29,24 @@ The project contains both **single-core** and **multi-core** variants (where the
 - Measure both **floating-point** and **integer** performance.
 - Support both **native C/C++** and **MicroPython** implementations to compare interpreter vs native performance.
 - Support **single-core** and **multicore** runs with efficient FIFO-based synchronisation.
+
+## Supported/tested targets (as of initial testing)
+
+- **Raspberry Pi Pico 2 (RP2350)** — tested
+- **ESP32-S3** — tested
+
+## Repository layout (recommended / detected structure)
+
+```
+/ (root)
+├─ c_c++/                  # native builds: C/C++ implementations + CMake / Makefiles
+│  ├─ mcu_blas_float/             
+|  |  ├─ CMakeLists.txt/   # kernel implementations + single/multicore variants
+│  |  ├─ multicore.c       # C benchamrk suite for axpy, matmul, spmv using floating point operations (exploiting the FPU and DSPs)
+│  ├─ mcu_blas_int/             
+|  |  ├─ CMakeLists.txt/   # kernel implementations + single/multicore variants
+│  |  ├─ multicore.c       # Cbenchamrk suite for axpy, matmul, spmv using integer operations
+├─ micropython/          
+├─ mcu_blas_float.py/      # MicroPython benchamrk suite for axpy, matmul, spmv using floating point operations (exploiting the FPU and DSPs)
+├─ mcu_blas_float.py/      # MicroPython benchamrk suite for axpy, matmul, spmv using integer operations
+
