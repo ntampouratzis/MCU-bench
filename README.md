@@ -1,8 +1,6 @@
 # MCU-bench
 
-**Microcontroller BLAS-style benchmark suite — C/C++ and MicroPython**
-
-**Repository:** `ntampouratzis/MCU-bench`
+**Microcontroller benchmark suite — C/C++ and MicroPython**
 
 ---
 
