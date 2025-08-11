@@ -28,10 +28,10 @@ The benchmark contains both **single-core** and **multi-core** variants (where t
 - Support both **native C/C++** and **MicroPython** implementations to compare interpreter vs native performance.
 - Support **single-core** and **multicore** runs with efficient FIFO-based synchronisation.
 
-!## Supported/tested targets (as of initial testing)
+<!-- ## Supported/tested targets (as of initial testing)
 
-!- **Raspberry Pi Pico 2 (RP2350)** — tested
-!- **ESP32-S3** — tested
+- **Raspberry Pi Pico 2 (RP2350)** — tested
+- **ESP32-S3** — tested -->
 
 ## Repository layout (recommended / detected structure)
 
