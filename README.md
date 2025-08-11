@@ -47,6 +47,23 @@ The project contains both **single-core** and **multi-core** variants (where the
 |  |  ├─ CMakeLists.txt/   # kernel implementations + single/multicore variants
 │  |  ├─ multicore.c       # Cbenchamrk suite for axpy, matmul, spmv using integer operations
 ├─ micropython/          
-├─ mcu_blas_float.py/      # MicroPython benchamrk suite for axpy, matmul, spmv using floating point operations (exploiting the FPU and DSPs)
-├─ mcu_blas_float.py/      # MicroPython benchamrk suite for axpy, matmul, spmv using integer operations
+|  ├─ mcu_blas_float.py/      # MicroPython benchamrk suite for axpy, matmul, spmv using floating point operations (exploiting the FPU and DSPs)
+|  ├─ mcu_blas_float.py/      # MicroPython benchamrk suite for axpy, matmul, spmv using integer operations
+
+## How the benchmarks work (methodology)
+1. **Warm-up**: each test performs a configurable warm-up run to ensure caches, PLLs and dynamic frequency scaling settle and to reduce the impact of one-off initialization costs.
+2. **Timed trials**: perform `N` trials of the kernel and measure elapsed cycles/time for each trial.
+3. **Aggregate & statistical reporting**: compute mean, median, standard deviation, and min/max for the measured times. Report **converted units** (seconds, FLOPS, OPs).
+
+**Important measurement details**
+- Use high-resolution timers where possible.
+- For floating-point FLOPS, compute the *exact* number of FLOPs executed by the kernel and divide by measured time.
+- For integer OPs, similarly count integer operations.
+- In multicore tests, rely on **FIFO-based synchronisation** to coordinate work between cores with minimal overhead.
+
+## Running (MicroPython)
+Download Thonny environment and build or obtain a MicroPython firmware for the target device (in case of RP2350 RISC-V based you can download the latest RISC-V firmware https://micropython.org/download/RPI_PICO2/).
+
+
+## Running (C/C++)
 
