@@ -59,8 +59,6 @@ The benchmark contains both **single-core** and **multi-core** variants (where t
 
 **Important measurement details**
 - Use high-resolution timers where possible.
-- For floating-point FLOPS, compute the *exact* number of FLOPs executed by the kernel and divide by measured time.
-- For integer OPs, similarly count integer operations.
 - In multicore tests, rely on **FIFO-based synchronisation** to coordinate work between cores with minimal overhead.
 - We have measured the **FLOPS/Watt** using the YOJOCK USB C Digital Multimeter.
 
