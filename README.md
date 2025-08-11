@@ -6,7 +6,9 @@
 
 ## Overview
 
-This repository contains a small, focused benchmark suite for microcontrollers (MCUs) implementing BLAS-style kernels with the goal of measuring **compute throughput** (FLOPS / OPs) and **operation rates** for both floating-point (exploiting the most recent FPUs) and integer workloads. The suite implements three kernels:
+This repository contains a benchmark suite for microcontrollers (MCUs) implementing BLAS-style kernels with the goal of measuring **compute throughput** (FLOPS / OPs) and **operation rates** for both floating-point (exploiting the most recent FPUs) and integer workloads which is compatible in both **ARM** and **RISC-V** based MCUs.
+
+The suite implements three kernels:
 
 - **AXPY** (y := a \* x + y)
 - **Matrix multiplication** (dense GEMM-like kernel)
@@ -60,6 +62,7 @@ The benchmark contains both **single-core** and **multi-core** variants (where t
 - For floating-point FLOPS, compute the *exact* number of FLOPs executed by the kernel and divide by measured time.
 - For integer OPs, similarly count integer operations.
 - In multicore tests, rely on **FIFO-based synchronisation** to coordinate work between cores with minimal overhead.
+- We have measured the **FLOPS/Watt** using the YOJOCK USB C Digital Multimeter.
 
 ## Running (MicroPython)
 Download Thonny environment and build or obtain a MicroPython firmware for the target device (in case of RP2350 RISC-V based you can download the latest RISC-V firmware https://micropython.org/download/RPI_PICO2/).
