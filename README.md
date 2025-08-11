@@ -19,7 +19,7 @@ Each kernel is available in two language tracks:
 1. **C/C++** (native builds that exercise MCU toolchains, optimized compiler flags and — where present — the hardware FPU and DSP units)
 2. **MicroPython** (ease of use, accessibility, and a view of interpreter-level performance)
 
-The project contains both **single-core** and **multi-core** variants (where the target architecture supports multiple cores, e.g., RP2350 and ESP32-S3) and features **efficient synchronisation through FIFO** for multicore implementations. It is intended to evaluate real-world compute throughput on small devices and to be extensible to new boards and kernels.
+The project contains both **single-core** and **multi-core** variants (where the target architecture supports multiple cores, e.g., RP2350 and ESP32-S3) and features **efficient synchronisation through FIFO** for multicore implementations. It is **highly parameterizable**, allowing configuration of number of cores, CPU frequency, and algorithm choice to match different performance scenarios. This makes it easy to explore hardware limits, compare architectures, and fine-tune workloads for optimal results on modern multi-core MCUs.
 
 ---
 
