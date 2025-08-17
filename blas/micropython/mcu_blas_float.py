@@ -1,5 +1,5 @@
 """
-RP Pico 2 MicroPython FLOPS benchmark (REVISED)
+MCU MicroPython FLOPS benchmark
 ---------------------------------------------
 This updated script fixes a threading bug and adds robust fallback logic.
 
@@ -9,7 +9,7 @@ Implemented kernels:
  - SPMV  : y := A_sparse * x (CSR-like format)
 
 Key changes in this revision
- - Correct multi-core use: **main thread (core 0) participates** and at most **one** new thread
+ - multi-core use: **main thread (core 0) participates** and at most **one** new thread
    is started on core 1. This avoids attempting to start multiple threads on core1 which
    causes `OSError: core1 in use` on the rp2 MicroPython port.
  - Graceful fallback: if starting the secondary thread fails (core1 busy or OSError), the
@@ -37,7 +37,7 @@ except Exception:
     _THREAD_AVAILABLE = False
 
 # -------------------- CONFIG --------------------
-machine.freq(280_000_000) #Declare the frequency (in Hz)
+machine.freq(240_000_000) #Declare the frequency (in Hz)
 ALGO = "MATMUL"   # one of: "AXPY", "MATMUL", "SPMV"
 MODE = "MULTI"    # "SINGLE" or "MULTI"
 NUM_THREADS = 2    # logically the number of worker *partitions* you want (1 or 2)
