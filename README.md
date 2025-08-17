@@ -39,19 +39,18 @@ The benchmark contains both **single-core** and **multi-core** variants (where t
 
 ```
 / (root)
-├─ blas/                    # BLAS multi-core MCU based implementation (AXPY, MATMUL, SPMV)
-│  ├─ micropython/             
-|  |  ├─ mcu_blas.py        # micropython implementation (tested with Thonny)
-│  ├─ c_c++/             
-|  |  ├─ CMakeLists.txt/    # CMake (automatically detect the SDK environment - tested with Pico SDK and ESP-EDF)
-│  |  ├─ multicore.c        # C/C++ implementation for axpy, matmul, spmv using both float and integer operations
 ├─ basic_operations/        # Basic multi-core MCU based implementation (add, sub, mult, div)  
 │  ├─ micropython/             
 |  |  ├─ mcu_operations.py  # micropython implementation (tested through Thonny)
 │  ├─ c_c++/             
 |  |  ├─ CMakeLists.txt/    # CMake (automatically detect the SDK environment - tested with Pico SDK and ESP-EDF)
 │  |  ├─ multicore.c        # C/C++ implementation for add, sub, mult, div using floating point operations
-
+├─ blas/                    # BLAS multi-core MCU based implementation (AXPY, MATMUL, SPMV)
+│  ├─ micropython/             
+|  |  ├─ mcu_blas.py        # micropython implementation (tested with Thonny)
+│  ├─ c_c++/             
+|  |  ├─ CMakeLists.txt/    # CMake (automatically detect the SDK environment - tested with Pico SDK and ESP-EDF)
+│  |  ├─ multicore.c        # C/C++ implementation for axpy, matmul, spmv using both float and integer operations
 ```
 
 ## How the benchmarks work (methodology)
