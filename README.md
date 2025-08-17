@@ -64,6 +64,6 @@ Download Thonny environment (https://thonny.org/) and build or obtain a MicroPyt
   4. Select the following:
   <img width="640" height="480" alt="3" src="https://github.com/user-attachments/assets/16262da9-9e96-4631-8ed6-5a2f67505d93" />
 
-## Running (C/C++)![Uploading 3.png…]()
+## Running (C/C++)
 
 
