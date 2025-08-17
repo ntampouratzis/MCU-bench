@@ -14,7 +14,7 @@ import time
 import machine
 
 # CONFIG --- change defaults here or use interactive prompts
-machine.freq(280_000_000) #Declare the frequency (in Hz)
+machine.freq(240_000_000) #Declare the frequency (in Hz)
 DEFAULT_DURATION_S = 2.0    # target wall-clock seconds per run
 UNROLL = 8                  # number of operations unrolled per inner block
 CHUNK = 128                 # number of unrolled blocks between time checks
