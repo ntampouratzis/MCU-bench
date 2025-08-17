@@ -53,7 +53,8 @@ The benchmark contains both **single-core** and **multi-core** variants (where t
 - We have measured the **FLOPS/Watt** using the YOJOCK USB C Digital Multimeter.
 
 ## Running (MicroPython)
-Download Thonny environment and build or obtain a MicroPython firmware for the target device (in case of RP2350 RISC-V based you can download the latest RISC-V firmware https://micropython.org/download/RPI_PICO2/).
+Download Thonny environment and build or obtain a MicroPython firmware for the target device.
+You may download the latest ARM or RISC-V firmware for RP2350 from here: https://micropython.org/download/RPI_PICO2/.
 
 
 ## Running (C/C++)
