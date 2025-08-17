@@ -54,10 +54,16 @@ The benchmark contains both **single-core** and **multi-core** variants (where t
 
 ## Running (MicroPython)
 Download Thonny environment (https://thonny.org/) and build or obtain a MicroPython firmware for the target device.
-- In case of Pico: 
+- In case of Pico (RP2040 and RP2350): 
   1. Press the BOOTSEL button and hold it while you connect it through USB to computer (This puts your Raspberry Pi Pico into USB mass storage device mode).
   2. You may download the latest ARM or RISC-V firmware for RP2350 from here: https://micropython.org/download/RPI_PICO2/.
-- You may download 
+- In case of ESP32-S3: 
+  1. Press the BOOTSEL button and hold it while you connect it through USB to computer
+  2. Select configure Interpreter (right-bottom)
+  3. Select Install or Update Micropython (esptool)
+  4. Select the following:
+  <img width="716" height="552" alt="3" src="https://github.com/user-attachments/assets/16262da9-9e96-4631-8ed6-5a2f67505d93" />
 
-## Running (C/C++)
+## Running (C/C++)![Uploading 3.png…]()
+
 
