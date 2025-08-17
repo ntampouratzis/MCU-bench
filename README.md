@@ -8,11 +8,12 @@
 
 This repository contains a benchmark suite for microcontrollers (MCUs) implementing both basic operations and BLAS-style kernels. The main goal is the accurate measurement (**compute throughput** (FLOPS / OPs) and **operation rates**) for both floating-point (exploiting the most recent FPUs) and integer workloads, which is compatible in a wide range of MCU architectures (**ARM**, **RISC-V** and **Espressif**).
 
-The suite implements three kernels:
+The suite implements four kernels:
 
 - **AXPY** (y := a \* x + y)
 - **Matrix multiplication** (dense GEMM-like kernel)
 - **Sparse matrix-vector multiply (SPMV)**
+- **Basic operations** (add, sub, mult, div)
 
 Each kernel is available in two language tracks:
 
