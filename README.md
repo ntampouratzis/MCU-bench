@@ -42,7 +42,7 @@ The benchmark contains both **single-core** and **multi-core** variants (where t
 │  |  ├─ multicore.c        # C/C++ implementation for axpy, matmul, spmv using both float and integer operations
 ```
 
-## How the benchmarks work (methodology)
+## How the benchmarks work
 1. **Warm-up**: each test performs a configurable warm-up run to ensure caches, PLLs and dynamic frequency scaling settle and to reduce the impact of one-off initialization costs.
 2. **Timed trials**: perform `N` trials of the kernel and measure elapsed cycles/time for each trial.
 3. **Aggregate & statistical reporting**: compute mean, median, standard deviation, and min/max for the measured times. Report **converted units** (seconds, FLOPS, OPs).
