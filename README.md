@@ -35,7 +35,7 @@ The benchmark contains both **single-core** and **multi-core** variants (where t
 - **Raspberry Pi Pico 2 (RP2350)** — tested
 - **ESP32-S3** — tested -->
 
-## Repository layout (recommended / detected structure)
+## Repository layout
 
 ```
 / (root)
