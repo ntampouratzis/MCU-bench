@@ -53,9 +53,10 @@ The benchmark contains both **single-core** and **multi-core** variants (where t
 - We have measured the **FLOPS/Watt** using the YOJOCK USB C Digital Multimeter.
 
 ## Running (MicroPython)
-Download Thonny environment and build or obtain a MicroPython firmware for the target device.
-- Press the BOOTSEL button and hold it while you connect it through USB to computer (This puts your Raspberry Pi Pico into USB mass storage device mode).
-  - You may download the latest ARM or RISC-V firmware for RP2350 from here: https://micropython.org/download/RPI_PICO2/.
+Download Thonny environment (https://thonny.org/) and build or obtain a MicroPython firmware for the target device.
+- In case of Pico: 
+  1. Press the BOOTSEL button and hold it while you connect it through USB to computer (This puts your Raspberry Pi Pico into USB mass storage device mode).
+  2. You may download the latest ARM or RISC-V firmware for RP2350 from here: https://micropython.org/download/RPI_PICO2/.
 - You may download 
 
 ## Running (C/C++)
