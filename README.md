@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repository contains a benchmark suite for microcontrollers (MCUs) implementing both basic operations and BLAS-style kernels. The main goal is the accurate measurement (**compute throughput** (FLOPS / OPs) and **operation rates**) for both floating-point (exploiting the most recent FPUs) and integer workloads, which is compatible in a wide range of MCU architectures (**ARM**, **RISC-V** and **Espressif**).
+This repository contains a **multi-core** benchmark suite for microcontrollers (MCUs) implementing both basic operations and BLAS-style kernels. The main goal is the accurate measurement (**compute throughput** (FLOPS / OPs) and **operation rates**) for both floating-point (exploiting the most recent FPUs) and integer workloads, which is compatible in a wide range of MCU architectures (**ARM**, **RISC-V** and **Espressif**).
 
 The suite implements four kernels:
 
