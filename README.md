@@ -104,11 +104,20 @@ cp ~/MCU-bench/blas/c_c++/* ~/pico/pico-examples/multicore/hello_multicore
 cmake -DPICO_PLATFORM=rp2350 ..
 ```
 
-- or prepare the project for ROSC-V architecture
+- OR prepare the project for ROSC-V architecture
 ```
 cmake -DPICO_PLATFORM=rp2350-riscv ..
 ```
 
+- Build the project
+```
+make hello_multicore
+```
+
+- Press the BOOTSEL button and hold it while you connect it through USB to computer & Copy the .uf2
+```
+cp ~/pico/pico-examples/build/multicore/hello_multicore/hello_multicore.uf2 /media/$USER/RP2350/
+```
 
 
 
