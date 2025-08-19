@@ -119,5 +119,5 @@ make hello_multicore
 cp ~/pico/pico-examples/build/multicore/hello_multicore/hello_multicore.uf2 /media/$USER/RP2350/
 ```
 
-
-
+In case of ESP32 (ESP32-S3):
+- You can use the instructions which described in the official tutorial: https://www.waveshare.com/wiki/ESP32-S3-Pico
