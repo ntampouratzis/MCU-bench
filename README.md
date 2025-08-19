@@ -66,5 +66,49 @@ Download Thonny environment (https://thonny.org/) and build or obtain a MicroPyt
   <img width="1915" height="336" alt="5" src="https://github.com/user-attachments/assets/b2d44d09-3cd1-4116-96dc-f1cec596b332" />
 
 ## Running (C/C++)
+In case of Pico (RP2040 and RP2350):
+- Install Required Packages
+```
+sudo apt update
+sudo apt install -y cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential git
+
+wget https://github.com/raspberrypi/pico-sdk-tools/releases/download/v2.1.1-3/riscv-toolchain-15-x86_64-lin.tar.gz
+sudo mkdir -p /opt/riscv/riscv-toolchain-15
+sudo chown $USER /opt/riscv/riscv-toolchain-15
+tar xvf riscv-toolchain-15-x86_64-lin.tar.gz -C /opt/riscv/riscv-toolchain-15
+
+export PICO_TOOLCHAIN_PATH=/opt/riscv/riscv-toolchain-15/
+```
+
+- Get the Pico SDK 2.2.0
+```
+mkdir -p ~/pico
+cd ~/pico
+git clone -b 2.2.0 https://github.com/raspberrypi/pico-sdk.git
+cd pico-sdk
+git submodule update --init
+echo "export PICO_SDK_PATH=$HOME/pico/pico-sdk" >> ~/.bashrc
+source ~/.bashrc
+```
+
+
+- Get Example Code & copy the files
+```
+cd ~/pico
+git clone -b 2.2.0 https://github.com/raspberrypi/pico-examples.git
+cp ~/MCU-bench/blas/c_c++/* ~/pico/pico-examples/multicore/hello_multicore
+```
+
+- Prepare the project for ARM architecture
+```
+cmake -DPICO_PLATFORM=rp2350 ..
+```
+
+- or prepare the project for ROSC-V architecture
+```
+cmake -DPICO_PLATFORM=rp2350-riscv ..
+```
+
+
 
 
