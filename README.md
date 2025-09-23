@@ -104,7 +104,7 @@ cp ~/MCU-bench/blas/c_c++/* ~/pico/pico-examples/multicore/hello_multicore
 cmake -DPICO_PLATFORM=rp2350 ..
 ```
 
-- OR prepare the project for ROSC-V architecture
+- *OR* prepare the project for RISC-V architecture
 ```
 cmake -DPICO_PLATFORM=rp2350-riscv ..
 ```
