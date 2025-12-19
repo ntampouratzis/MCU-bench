@@ -95,22 +95,25 @@ source ~/.bashrc
 - Get Example Code & copy the files
 ```
 cd ~/pico
-git clone -b 2.2.0 https://github.com/raspberrypi/pico-examples.git
+git clone https://github.com/raspberrypi/pico-examples.git
 cp ~/MCU-bench/blas/c_c++/* ~/pico/pico-examples/multicore/hello_multicore
 ```
 
 - Prepare the project for ARM architecture
 ```
+cd ~/pico/pico-examples/multicore
 cmake -DPICO_PLATFORM=rp2350 ..
 ```
 
 - *OR* prepare the project for RISC-V architecture
 ```
+cd ~/pico/pico-examples/multicore
 cmake -DPICO_PLATFORM=rp2350-riscv ..
 ```
 
 - Build the project
 ```
+cd ~/pico/pico-examples/multicore
 make hello_multicore
 ```
 
